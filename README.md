@@ -1,7 +1,9 @@
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f635-200d-1f4ab.svg" width="72" alt="😵‍💫">
-  &nbsp; → &nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f9d1-200d-1f4bb.svg" width="72" alt="🧑‍💻">
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f635-200d-1f4ab.svg" height="64" alt="😵‍💫">
+  &nbsp;&nbsp;
+  <img src="assets/arrow.svg" height="64" alt="→">
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f9d1-200d-1f4bb.svg" height="64" alt="🧑‍💻">
 </p>
 
 <h1 align="center">human-harness</h1>
