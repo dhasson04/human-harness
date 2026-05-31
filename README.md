@@ -1,9 +1,10 @@
-<h1 align="center">
+<p align="center">
   <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f635-200d-1f4ab.svg" width="72" alt="😵‍💫">
   &nbsp; --&gt; &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f9d1-200d-1f4bb.svg" width="72" alt="🧑‍💻">
-</h1>
-<h2 align="center">human-harness</h2>
+</p>
+
+<h1 align="center">human-harness</h1>
 <p align="center"><b>a focus harness for a human with ADHD</b></p>
 
 <p align="center">
