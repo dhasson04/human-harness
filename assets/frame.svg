@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="300" viewBox="0 0 760 300" font-family="ui-monospace, 'SF Mono', 'Cascadia Code', Consolas, monospace">
+  <rect width="760" height="300" rx="12" fill="#0d1117"/>
+
+  <!-- SYSTEM PROMPT (highlighted) -->
+  <rect x="24" y="24" width="712" height="92" rx="8" fill="#0f2417" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="44" y="50" font-size="12" letter-spacing="1.5" fill="#3fb950">SYSTEM PROMPT</text>
+  <text x="44" y="77" font-size="16" fill="#e6edf3">You are a focused senior software engineer.</text>
+  <text x="44" y="101" font-size="16" fill="#e6edf3">You ship. You do not open Twitter.</text>
+
+  <!-- NEXT ACTION -->
+  <rect x="24" y="132" width="712" height="64" rx="8" fill="#0d1f33" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="44" y="158" font-size="12" letter-spacing="1.5" fill="#58a6ff">▶ NEXT ACTION</text>
+  <text x="716" y="158" font-size="12" fill="#6e7681" text-anchor="end">~3 min</text>
+  <text x="44" y="183" font-size="16" fill="#e6edf3">Open the auth PR and read the 3 review comments.</text>
+
+  <!-- queued / off-limits -->
+  <text x="28" y="232" font-size="13" fill="#8b949e">queued · don't load yet</text>
+  <text x="44" y="253" font-size="13" fill="#6e7681">· reply to Sarah     · write the launch post</text>
+  <text x="28" y="283" font-size="13" fill="#8b949e">off-limits · Twitter · unrelated refactors · any new task</text>
+</svg>

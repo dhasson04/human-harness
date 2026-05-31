@@ -28,6 +28,12 @@
 
 `human-harness` is a [Claude Code](https://claude.com/claude-code) skill that keeps you on one task. Agent harnesses feed an LLM one instruction at a time so it doesn't wander off; this does the same for you. It casts a system prompt, breaks your task into the single next action, and shows you one thing at a time. Drift, and it re-injects your system prompt at you.
 
+## What it looks like
+
+<p align="center">
+  <img src="assets/frame.svg" alt="the human-harness frame: a highlighted system prompt and one next action" width="680">
+</p>
+
 ## Before and after
 
 <table>
@@ -55,13 +61,9 @@ started: 0
 **🧑‍💻 human-harness**
 
 ```
-SYSTEM PROMPT
-You are a focused senior software
-engineer. You do not open Twitter.
-
 ▶ NEXT ACTION
-Open the auth PR, read the 3
-review comments.          ~3 min
+Open the auth PR, read the
+3 review comments.       ~3 min
 ```
 
 *one thing. started it.*
