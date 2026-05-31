@@ -45,7 +45,7 @@ system prompt at you.
 It's a Claude Code skill — a single file, just like any other skill.
 
 ```bash
-git clone https://github.com/<you>/human-harness
+git clone https://github.com/dhasson04/human-harness
 mkdir -p ~/.claude/skills/human-harness
 cp human-harness/SKILL.md ~/.claude/skills/human-harness/SKILL.md
 ```
