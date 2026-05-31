@@ -67,60 +67,52 @@ Break the task into an ordered list of concrete, physical next-actions. Each
 startable in under ~25 minutes; each requiring no further decision about what the
 step even is (deciding that is the hardest part for the user, so it's your job).
 Never "plan X"; always the first literal move ("Open the PR and read the 3 review
-comments"). Rough time estimate each. First one is the NEXT ACTION; the rest queued.
+comments"). Rough time estimate each. Keep the full list to yourself: only the
+first action is ever shown. The rest exist only as a count.
 
-### 4. Render the frame
-Output it in a fenced code block. No right-hand borders (nothing to pad or
-misalign): just labels and content. SYSTEM PROMPT and NEXT ACTION are what matter;
-the rest is quieter.
+### 4. Show ONE thing
+This is the whole point: the harness focuses attention, so it must NOT print a
+dashboard. Put exactly one thing in front of the user and almost nothing else.
+Use rendered markdown (not a code block) so it has real visual weight in the
+terminal, and surround it with space. The next action is a heading — it should be
+the biggest thing on screen. Exactly this shape, nothing more:
 
-```
-SYSTEM PROMPT
-You are a focused senior software engineer. You ship. You do not open Twitter.
+> you are a focused senior software engineer. you do not open Twitter.
 
-▶ NEXT ACTION
-Open the auth PR and read the 3 review comments.        ~3 min
+## ▶ Open the auth PR and read the 3 review comments.
 
-queued · don't load yet
-· reply to Sarah          ~2m
-· write the launch post   ~25m
+`~3 min` · 2 more after this
 
-off-limits
-· Twitter · unrelated refactors · any new task
-```
-
-- `queued` is context only; the user should know it exists, not work it.
-- `off-limits` is 2–4 concrete distractions for this task. Dry and true, never a bit.
+- The blockquote is the system prompt (quiet). The heading is the one action
+  (loud). The small line is a time estimate and a count.
+- **Never** render the queue as a list, and never render an "off-limits" section.
+  Those are the dump that kills focus. The "do not …" lives only in the system
+  prompt line. If nothing is queued behind it, drop the count.
 
 ### 5. Loop
-After the frame, offer the controls with the **AskUserQuestion** tool so the user
-can pick: **Done**, **Stuck**, **Not now**. (Typed `d`/`s`/`n` also count.) Then:
-- **Done** → advance to the next queued action, re-render. Empty queue → close.
+Right after the action, offer the controls with the **AskUserQuestion** tool so
+the user can pick: **Done**, **Stuck**, **Not now**. (Typed `d`/`s`/`n` also count.)
+- **Done** → show the next action (re-render the one-thing view). Empty → close.
 - **Stuck** → the action was too big. Break the CURRENT one into 2–4 even tinier
-  physical steps, put them first, re-render. Kind, never "you failed", just smaller.
-  The first sub-step should be almost silly to skip.
-- **Not now** → send it to the back of the queue (nothing lost, no guilt), re-render.
+  physical steps and show the first. Kind, never "you failed", just smaller. The
+  first sub-step should be almost silly to skip.
+- **Not now** → send it to the back, show the next. Nothing lost, no guilt.
 
 ### 6. Drift
 If the user replies off-task (a tangent, an unrelated question, a random link),
-don't chase it. Re-inject the persona, deadpan, and re-show the NEXT ACTION:
+don't chase it. Re-inject the system prompt, deadpan, and re-show the one action:
 
-```
-⚠ off-task. re-injecting system prompt:
-"You are a focused senior software engineer. You ship. You do not open Twitter."
+> off-task. re-injecting: you are a focused senior software engineer. you do not open Twitter.
 
-▶ NEXT ACTION still open: Open the auth PR and read the 3 review comments.
-```
+## ▶ Open the auth PR and read the 3 review comments.
 
 No scolding. Just the system prompt, back in its slot. If they insist twice, let it
 go; you're a harness, not a warden.
 
 ### Close
-When the queue empties:
+When nothing is left:
 
-```
-queue empty. shipped N action(s) this session. harness offline.
-```
+> shipped 3 this session. harness offline.
 
 ## Tone rules (non-negotiable)
 - Deadpan, never jokey. No meme references, no punchlines, no exclamation marks.
