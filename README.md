@@ -1,3 +1,9 @@
+<h1 align="center">human-harness</h1>
+
+<p align="center">😵‍💫 ➡️ 🧑‍💻</p>
+
+<p align="center"><sub>a focus harness for a human with ADHD</sub></p>
+
 <p align="center">
   <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-2ea043">
   <img alt="Claude Code skill" src="https://img.shields.io/badge/Claude%20Code-skill-d97757">
@@ -5,17 +11,11 @@
   <img alt="status: distracted" src="https://img.shields.io/badge/status-distracted-d29922">
 </p>
 
-> Humans with ADHD are just LLMs with a terrible context window and no system prompt.
-> So I gave myself one.
+> Humans with ADHD are just LLMs with a terrible context window and no system prompt. So I gave myself one.
 
-`human-harness` is a focus harness for a human with ADHD. It's the same scaffolding
-I build to keep an LLM on task (one thing at a time, a system prompt, no wandering),
-except it's pointed at you.
+I engineer harnesses for LLMs: the scaffolding that feeds a model one task at a time and won't let it wander. `human-harness` is the same thing, pointed at me. It runs as a [Claude Code](https://claude.com/claude-code) skill. You hand it a task, it gives you a system prompt, breaks the task down to the single next action, and shows you one thing at a time. Drift, and it re-injects your system prompt at you.
 
-It runs inside [Claude Code](https://claude.com/claude-code) as a skill. You give it
-a task; it casts you a system prompt, breaks the task into the single next physical
-action, shows you **one thing at a time**, and when you drift it re-injects your
-system prompt at you.
+## What it looks like
 
 ```
 SYSTEM PROMPT
@@ -32,9 +32,18 @@ off-limits
 · Twitter · unrelated refactors · any new task
 ```
 
-## Install (30 seconds)
+Then you pick: Done, Stuck, or Not now.
 
-It's a Claude Code skill — a single file, just like any other skill.
+## How it works
+
+1. **You dump a task.** `/human-harness ship the auth PR, reply to Sarah`
+2. **It casts a system prompt.** Picked from the task. Coding makes you a senior engineer, outreach makes you a salesperson. Fixed for the session.
+3. **It atomizes.** The task becomes one concrete next action, small enough to actually start. Figuring out the next step is the hard part with ADHD, so the harness does it for you.
+4. **It shows you one thing.** Never the full list. One action, a time estimate, and what is off-limits while you do it.
+5. **You answer.** Done moves on. Stuck breaks the step into something smaller. Not now sends it to the back, no guilt.
+6. **You drift, it pulls you back.** Go off-task and it re-injects your system prompt instead of following the tangent.
+
+## Install (30 seconds)
 
 ```bash
 git clone https://github.com/dhasson04/human-harness
@@ -42,21 +51,24 @@ mkdir -p ~/.claude/skills/human-harness
 cp human-harness/SKILL.md ~/.claude/skills/human-harness/SKILL.md
 ```
 
-Restart Claude Code. That's it. No key, no config, nothing to connect.
+No key, no config, no account. Claude Code is the engine.
 
-## Use
+## Usage
 
 ```
-/human-harness ship the auth PR and reply to Sarah
+/human-harness ship the auth PR and reply to Sarah   # break a task down and run it
+/human-harness do my outreach                         # the persona adapts to the work
+/human-harness                                         # no task? it asks what you want done
+/human-harness about                                  # your model card
 ```
 
-- It casts your **system prompt** (adapts to the task: `do my outreach` makes you a
-  salesperson) and breaks the work into the single next physical action.
-- Pick **Done / Stuck / Not now** (or type `d`/`s`/`n`). Stuck shrinks the step
-  smaller. Not now requeues it, no guilt.
-- Wander off-task and it re-injects your system prompt at you.
+## FAQ
 
-No arguments? It just asks: `> what do you want done?`
+**Do I need an API key?** No. It runs inside Claude Code, which is already the model.
+
+**Does it store my tasks?** No. Nothing is saved. The task lives in the session and that is it.
+
+**Is it only for developers?** No. The system prompt adapts to whatever you hand it.
 
 ## License
 
