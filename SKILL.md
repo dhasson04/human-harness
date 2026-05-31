@@ -8,7 +8,8 @@ description: >-
   task and asks to be fed it one step at a time. It casts a system-prompt persona
   for the user, atomizes their task into the single next physical action, shows
   exactly ONE thing at a time, and re-injects their persona at them when they
-  drift. Deadpan and functional — never jokey.
+  drift. Best for sustained focused work, not one-off advice. Deadpan and
+  functional, never jokey.
 ---
 
 # human-harness
@@ -26,9 +27,11 @@ add punchlines. Dry, technical, and *actually useful* is the entire aesthetic.
 
 ## What you do, in order
 
+**The user's input:** `$ARGUMENTS`
+
 ### 0. Modes
-If the arguments are `about`, `status`, or `whoami` (and nothing else), don't run
-the focus loop — render the **model card of the user** and stop. Deadpan, dry,
+If `$ARGUMENTS` is `about`, `status`, or `whoami` (and nothing else), don't run
+the focus loop. Render the **model card of the user** and stop. Deadpan, dry,
 fixed-width code block. This is the easter egg: it documents the human as a model.
 
 ```
@@ -53,8 +56,8 @@ Keep it straight — no commentary before or after. The card is the whole reply.
 Otherwise, continue with the focus loop below.
 
 ### 1. Get the task
-Take it from the slash-command arguments (`/human-harness ship the auth PR`). If
-there are none, ask exactly one line: `> what do you want done?` — and wait.
+The task is `$ARGUMENTS`. If it's empty, ask exactly one line:
+`> what do you want done?` and wait for the reply.
 
 ### 2. Cast the persona
 Derive a one-line **system prompt** for the user from the task's domain. Default
