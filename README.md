@@ -14,10 +14,9 @@
 > Humans with ADHD are just LLMs with a terrible context window and no system prompt.
 > So I gave myself one.
 
-`human-harness` is a focus harness — for a human with ADHD. You build scaffolding
-that keeps LLMs on task: feed them one thing at a time, give them a system prompt,
-don't let them wander. This is that, pointed at *you*. You are the model. The
-harness wraps you.
+`human-harness` is a focus harness for a human with ADHD. It's the same scaffolding
+I build to keep an LLM on task (one thing at a time, a system prompt, no wandering),
+except it's pointed at you.
 
 It runs inside [Claude Code](https://claude.com/claude-code) as a skill. You give it
 a task; it casts you a system prompt, breaks the task into the single next physical
