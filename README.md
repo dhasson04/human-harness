@@ -2,7 +2,7 @@
 
 <sub>`context window: 1 · status: distracted`</sub>
 
-> Humans are just LLMs with a terrible context window and no system prompt.
+> Humans with ADHD are just LLMs with a terrible context window and no system prompt.
 > So I gave myself one.
 
 `human-harness` is a focus harness — for a human with ADHD. You build scaffolding
