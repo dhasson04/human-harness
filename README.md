@@ -26,7 +26,7 @@
 
 > Humans with ADHD are just LLMs with a terrible context window and no system prompt. So I gave myself one.
 
-I engineer harnesses for LLMs: the scaffolding that feeds a model one task at a time and won't let it wander. `human-harness` is the same thing, pointed at me. It runs as a [Claude Code](https://claude.com/claude-code) skill. You hand it a task, it gives you a system prompt, breaks the task down to the single next action, and shows you one thing at a time. Drift, and it re-injects your system prompt at you.
+`human-harness` is a [Claude Code](https://claude.com/claude-code) skill that keeps you on one task. Agent harnesses feed an LLM one instruction at a time so it doesn't wander off; this does the same for you. It casts a system prompt, breaks your task into the single next action, and shows you one thing at a time. Drift, and it re-injects your system prompt at you.
 
 ## Before and after
 
