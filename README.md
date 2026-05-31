@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f635-200d-1f4ab.svg" width="72" alt="😵‍💫">
-  &nbsp; --&gt; &nbsp;
+  &nbsp; → &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@latest/assets/svg/1f9d1-200d-1f4bb.svg" width="72" alt="🧑‍💻">
 </p>
 
