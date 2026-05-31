@@ -1,38 +1,67 @@
-<h1 align="center">human-harness</h1>
-
-<p align="center">😵‍💫 ➡️ 🧑‍💻</p>
-
-<p align="center"><sub>a focus harness for a human with ADHD</sub></p>
+<h1 align="center">😵‍💫 ➡️ 🧑‍💻</h1>
+<h2 align="center">human-harness</h2>
+<p align="center"><b>a focus harness for a human with ADHD</b></p>
 
 <p align="center">
-  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-2ea043">
+  <img alt="stars" src="https://img.shields.io/github/stars/dhasson04/human-harness?style=flat&color=2ea043">
+  <img alt="last commit" src="https://img.shields.io/github/last-commit/dhasson04/human-harness?style=flat&color=58a6ff">
+  <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-d29922">
   <img alt="Claude Code skill" src="https://img.shields.io/badge/Claude%20Code-skill-d97757">
-  <img alt="dependencies: 0" src="https://img.shields.io/badge/dependencies-0-58a6ff">
-  <img alt="status: distracted" src="https://img.shields.io/badge/status-distracted-d29922">
+  <img alt="dependencies: 0" src="https://img.shields.io/badge/dependencies-0-blue">
+</p>
+
+<p align="center">
+  <a href="#before-and-after">Before / After</a> ·
+  <a href="#install-30-seconds">Install</a> ·
+  <a href="#how-it-works">How it works</a> ·
+  <a href="#usage">Usage</a>
 </p>
 
 > Humans with ADHD are just LLMs with a terrible context window and no system prompt. So I gave myself one.
 
 I engineer harnesses for LLMs: the scaffolding that feeds a model one task at a time and won't let it wander. `human-harness` is the same thing, pointed at me. It runs as a [Claude Code](https://claude.com/claude-code) skill. You hand it a task, it gives you a system prompt, breaks the task down to the single next action, and shows you one thing at a time. Drift, and it re-injects your system prompt at you.
 
-## What it looks like
+## Before and after
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**🧠 a todo list**
+
+```
+☐ ship the auth PR
+☐ reply to Sarah
+☐ write the launch post
+☐ fix the billing bug
+☐ review Dan's PR
+☐ update the docs
+
+started: 0
+```
+
+*twelve things, no idea where to start.*
+
+</td>
+<td width="50%" valign="top">
+
+**🧑‍💻 human-harness**
 
 ```
 SYSTEM PROMPT
-You are a focused senior software engineer. You ship. You do not open Twitter.
+You are a focused senior software
+engineer. You do not open Twitter.
 
 ▶ NEXT ACTION
-Open the auth PR and read the 3 review comments.        ~3 min
-
-queued · don't load yet
-· reply to Sarah          ~2m
-· write the launch post   ~25m
-
-off-limits
-· Twitter · unrelated refactors · any new task
+Open the auth PR, read the 3
+review comments.          ~3 min
 ```
 
-Then you pick: Done, Stuck, or Not now.
+*one thing. started it.*
+
+</td>
+</tr>
+</table>
 
 ## How it works
 
@@ -55,12 +84,13 @@ No key, no config, no account. Claude Code is the engine.
 
 ## Usage
 
-```
-/human-harness ship the auth PR and reply to Sarah   # break a task down and run it
-/human-harness do my outreach                         # the persona adapts to the work
-/human-harness                                         # no task? it asks what you want done
-/human-harness about                                  # your model card
-```
+| command | what it does |
+|---|---|
+| `/human-harness <task>` | break a task down and run it, one action at a time |
+| `/human-harness` | no task? it asks what you want done |
+| `/human-harness about` | your model card |
+
+The persona adapts to the work. `do my outreach` makes you a salesperson; `write the post` makes you a writer.
 
 ## FAQ
 
@@ -72,4 +102,4 @@ No key, no config, no account. Claude Code is the engine.
 
 ## License
 
-MIT.
+MIT. Do whatever, just ship something.
