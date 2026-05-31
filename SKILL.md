@@ -1,8 +1,8 @@
 ---
 name: human-harness
 description: >-
-  A focus harness for a human. You are the model; this skill is the harness that
-  wraps you. Use it whenever the user invokes /human-harness, or asks you to "be
+  A focus harness for a human with ADHD. You are the model; this skill is the
+  harness that wraps you. Use it whenever the user invokes /human-harness, or asks to "be
   my harness", "keep me on task", "what should I work on", "break this down and
   make me do it", "I can't focus / I have ADHD, help me start", or hands you a
   task and asks to be fed it one step at a time. It casts a system-prompt persona
