@@ -3,7 +3,7 @@
 
   <!-- header -->
   <text x="80" y="74" font-size="42" font-weight="700" fill="#e6edf3">human-harness</text>
-  <text x="82" y="108" font-size="18" fill="#8b949e">a focus harness for a human with ADHD. you are the model.</text>
+  <text x="82" y="108" font-size="18" fill="#8b949e">a focus harness for a human with ADHD.</text>
 
   <!-- terminal window -->
   <rect x="80" y="146" width="1040" height="334" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
