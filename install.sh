@@ -42,8 +42,14 @@ ok()   { printf '  \033[32m✓\033[0m %s\n' "$*"; }
 skip() { printf '  \033[2m·\033[0m %s\n' "$*"; }
 
 # --- locate the skill source (local clone or download) ----------------------
+# Only trust a sibling SKILL.md when invoked from a real file path. Under
+# `curl ... | sh`, $0 is the shell name ("sh") with no slash, so dirname would
+# resolve to the caller's CWD and we'd copy an unrelated SKILL.md by mistake.
 SKILL_SRC=""
-SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd 2>/dev/null || true)
+SCRIPT_DIR=""
+case "$0" in
+  */*) SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd 2>/dev/null || true) ;;
+esac
 if [ -n "$SCRIPT_DIR" ] && [ -f "$SCRIPT_DIR/SKILL.md" ]; then
   SKILL_SRC="$SCRIPT_DIR/SKILL.md"
 else

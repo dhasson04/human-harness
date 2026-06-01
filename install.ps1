@@ -23,8 +23,12 @@ $SkillName = "human-harness"
 $Agents    = @("claude", "codex", "gemini")
 
 function Get-SkillSource {
-  $local = Join-Path $PSScriptRoot "SKILL.md"
-  if (Test-Path $local) { return (Get-Content $local -Raw) }
+  # $PSScriptRoot is empty when run via `irm ... | iex` (no backing file); only
+  # probe for a sibling SKILL.md when we actually have a script directory.
+  if ($PSScriptRoot) {
+    $local = Join-Path $PSScriptRoot "SKILL.md"
+    if (Test-Path $local) { return (Get-Content $local -Raw) }
+  }
   return (Invoke-RestMethod -Uri "$RepoRaw/SKILL.md")
 }
 
