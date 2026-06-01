@@ -83,13 +83,21 @@ Open the auth PR, read the
 
 ## Install (30 seconds)
 
+One line. Auto-detects your agents (Claude Code, Codex, Gemini, OpenClaw) and installs into each:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/dhasson04/human-harness/main/install.sh | sh
+```
+
+Or drop the one file in by hand:
+
 ```bash
 git clone https://github.com/dhasson04/human-harness
 mkdir -p ~/.claude/skills/human-harness
 cp human-harness/SKILL.md ~/.claude/skills/human-harness/SKILL.md
 ```
 
-No key, no config, no account. Claude Code is the engine.
+No key, no config, no account, no dependencies — the agent is the engine. Per-agent paths and the `--only` / `--all` / `--uninstall` flags are in [INSTALL.md](INSTALL.md).
 
 ## Usage
 

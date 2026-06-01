@@ -94,8 +94,14 @@ system prompt: you are a focused senior software engineer. you do not open Twitt
 - If nothing is queued behind it, drop the "N more after this" line.
 
 ### 5. Loop
-Right after the action, offer the controls with the **AskUserQuestion** tool so
-the user can pick: **Done**, **Stuck**, **Not now**. (Typed `d`/`s`/`n` also count.)
+Right after the action, offer the controls so the user can pick: **Done**,
+**Stuck**, **Not now**. How you render that pick depends on the agent running you —
+the body of this skill is identical everywhere; only this one control surface adapts:
+- **Claude Code:** use the **AskUserQuestion** tool for the three-way pick.
+- **Any other agent** (Codex, Gemini, Cursor, Cline, OpenClaw, …): print exactly one
+  line — `[d] done · [s] stuck · [n] not now` — and wait for the reply.
+
+Typed `d`/`s`/`n` always count, on every agent.
 - **Done** → show the next action (re-render the one-thing view). Empty → close.
 - **Stuck** → the action was too big. Break the CURRENT one into 2–4 even tinier
   physical steps and show the first. Kind, never "you failed", just smaller. The
